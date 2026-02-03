@@ -13,3 +13,6 @@ add_subdirectory(Platform)
 
 add_library(Engine INTERFACE)
 
+target_link_libraries(Engine
+  INTERFACE Platform
+)
