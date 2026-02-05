@@ -2,7 +2,7 @@ add_library(Platform STATIC)
 
 target_sources(Platform
   PRIVATE
-    Private/Window.cpp
+    Private/SDLWindow.cpp
   PUBLIC
     FILE_SET HEADERS
     BASE_DIRS Public
