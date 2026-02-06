@@ -2,12 +2,12 @@ add_library(Platform STATIC)
 
 target_sources(Platform
   PRIVATE
-    Private/SDLWindow.cpp
+    Private/RaylibWindow.cpp
   PUBLIC
     FILE_SET HEADERS
     BASE_DIRS Public
     FILES
-      Public/Window.hpp
+    Public/WindowImpl.hpp
 )
 
 target_include_directories(Platform
@@ -15,8 +15,8 @@ target_include_directories(Platform
     ${CMAKE_CURRENT_SOURCE_DIR}/Public
 )
 
-find_package(SDL3 REQUIRED)
+find_package(raylib REQUIRED)
 
 target_link_libraries(Platform
-  PUBLIC SDL3::SDL3
+  PUBLIC raylib 
 )

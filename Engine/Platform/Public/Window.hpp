@@ -15,14 +15,14 @@ struct WindowConfig {
 
 class Window {
 private:
-  WindowConfig windowConfig;
+  WindowConfig cfg;
 
 protected:
-  WindowConfig &GetConfig() { return windowConfig; }
+  WindowConfig &GetConfig() { return cfg; }
 
 public:
   virtual ~Window() = default;
-  Window(WindowConfig windowConfig) : windowConfig(windowConfig) {}
+  Window(WindowConfig cfg) : cfg(cfg) {}
   virtual void Init() = 0;
   virtual void Run() = 0;
 };
