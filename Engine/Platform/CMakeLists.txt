@@ -14,3 +14,9 @@ target_include_directories(Platform
   PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/Public
 )
+
+find_package(SDL3 REQUIRED)
+
+target_link_libraries(Platform
+  PUBLIC SDL3::SDL3
+)

@@ -2,7 +2,7 @@
 #include <memory>
 
 int main() {
-  WindowConfig windowConfig(32, 32);
+  WindowConfig windowConfig("Test");
   std::unique_ptr<Window> window = GetWindow(windowConfig);
   window->Init();
   window->Run();
