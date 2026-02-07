@@ -8,6 +8,7 @@ class RendererImpl : public Renderer {
 private:
   std::unordered_map<TextureId, Texture2D> textures;
   std::stack<TextureId> availableIds;
+  std::stack<RenderCommand> renderStack;
 
 public:
   RendererImpl() {
@@ -26,14 +27,23 @@ public:
     return id;
   }
 
-  void RenderTexture(TextureId textureId, int x = 0, int y = 0) override {
-    if (textureId == 0) {
-      DrawRectangle(x, y, 64, 64, RED);
+  void RenderTexture(RenderCommand command) override {
+    if (command.textureId == 0) {
+      DrawRectangle(command.x, command.y, 64, 64, RED);
       return;
     }
-    auto it = textures.find(textureId);
-    if (it != textures.end()) {
-      DrawTexture(it->second, x, y, WHITE);
+    renderStack.push(command);
+    return;
+  }
+
+  void Update() override {
+    while (!renderStack.empty()) {
+      RenderCommand command = renderStack.top();
+      renderStack.pop();
+      auto it = textures.find(command.textureId);
+      if (it != textures.end()) {
+        DrawTexture(it->second, command.x, command.y, WHITE);
+      }
     }
   }
 };
