@@ -1,19 +1,22 @@
 #pragma once
 
 #include <cstdint>
+#include <memory>
 #include <string>
 
-using TextureId = uint8_t;
+using Sprite = uint8_t;
 
 struct RenderCommand {
-  TextureId textureId;
+  Sprite textureId;
   int x, y;
 };
 
 class Renderer {
 public:
   virtual ~Renderer() = default;
-  virtual TextureId RegisterTexture(std::string path) = 0;
-  virtual void RenderTexture(RenderCommand command) = 0;
-  virtual void Update();
+  virtual Sprite RegisterTexture(std::string path) = 0;
+  virtual void QueueCommand(RenderCommand command) = 0;
+  virtual void RenderQueue() = 0;
 };
+
+std::unique_ptr<Renderer> GetRenderer();

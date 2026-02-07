@@ -1,14 +1,15 @@
 #include "Renderer.hpp"
 #include <memory>
+#include <queue>
 #include <raylib.h>
 #include <stack>
 #include <unordered_map>
 
 class RendererImpl : public Renderer {
 private:
-  std::unordered_map<TextureId, Texture2D> textures;
-  std::stack<TextureId> availableIds;
-  std::stack<RenderCommand> renderStack;
+  std::unordered_map<Sprite, Texture2D> textures;
+  std::stack<Sprite> availableIds;
+  std::queue<RenderCommand> renderQueue;
 
 public:
   RendererImpl() {
@@ -17,31 +18,31 @@ public:
     }
   }
 
-  TextureId RegisterTexture(std::string path) override {
+  Sprite RegisterTexture(std::string path) override {
     if (availableIds.empty()) {
       return 0;
     }
-    TextureId id = availableIds.top();
+    Sprite id = availableIds.top();
     availableIds.pop();
     textures[id] = LoadTexture(path.c_str());
     return id;
   }
 
-  void RenderTexture(RenderCommand command) override {
-    if (command.textureId == 0) {
-      DrawRectangle(command.x, command.y, 64, 64, RED);
-      return;
-    }
-    renderStack.push(command);
+  void QueueCommand(RenderCommand command) override {
+    renderQueue.push(command);
     return;
   }
 
-  void Update() override {
-    while (!renderStack.empty()) {
-      RenderCommand command = renderStack.top();
-      renderStack.pop();
+  void RenderQueue() override {
+    while (!renderQueue.empty()) {
+      RenderCommand command = renderQueue.front();
+      renderQueue.pop();
       auto it = textures.find(command.textureId);
       if (it != textures.end()) {
+        if (command.textureId == 0) {
+          DrawRectangle(command.x, command.y, 64, 64, RED);
+          return;
+        }
         DrawTexture(it->second, command.x, command.y, WHITE);
       }
     }

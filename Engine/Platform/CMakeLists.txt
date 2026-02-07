@@ -2,12 +2,14 @@ add_library(Platform STATIC)
 
 target_sources(Platform
   PRIVATE
-    Private/RaylibWindow.cpp
+    Private/WindowImpl.cpp
+    Private/RendererImpl.cpp
   PUBLIC
     FILE_SET HEADERS
     BASE_DIRS Public
     FILES
-    Public/WindowImpl.hpp
+      Public/Window.hpp
+      Public/Renderer.hpp
 )
 
 target_include_directories(Platform
