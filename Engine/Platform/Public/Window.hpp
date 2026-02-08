@@ -1,6 +1,5 @@
 #pragma once
 
-#include "Renderer.hpp"
 #include "WindowTypes.hpp"
 #include <memory>
 
@@ -16,7 +15,8 @@ public:
   Window(WindowConfig cfg) : cfg(cfg) {}
   virtual bool IsRunning() = 0;
   virtual void Init() = 0;
-  virtual void Draw(std::shared_ptr<Renderer> renderer) = 0;
+  virtual void BeginFrame() = 0;
+  virtual void EndFrame() = 0;
   virtual void Close() = 0;
 };
 
