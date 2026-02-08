@@ -19,4 +19,4 @@ public:
   virtual void RenderQueue() = 0;
 };
 
-std::unique_ptr<Renderer> GetRenderer();
+std::shared_ptr<Renderer> GetRenderer();

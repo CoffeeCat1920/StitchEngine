@@ -21,4 +21,5 @@ find_package(raylib REQUIRED)
 
 target_link_libraries(Platform
   PUBLIC raylib 
+  PUBLIC Types
 )

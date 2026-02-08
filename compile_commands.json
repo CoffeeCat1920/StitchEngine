@@ -1,13 +1,25 @@
 [
 {
   "directory": "/home/ok/Code/stitchEngine/Build/Engine/Platform",
-  "command": "/usr/bin/c++  -I/home/ok/Code/stitchEngine/Engine/Platform/Public -std=c++20 -o CMakeFiles/Platform.dir/Private/Window.cpp.o -c /home/ok/Code/stitchEngine/Engine/Platform/Private/Window.cpp",
-  "file": "/home/ok/Code/stitchEngine/Engine/Platform/Private/Window.cpp",
-  "output": "Engine/Platform/CMakeFiles/Platform.dir/Private/Window.cpp.o"
+  "command": "/usr/bin/c++  -I/home/ok/Code/stitchEngine/Engine/Platform/Public -I/home/ok/Code/stitchEngine/Engine/Types/Public -std=c++20 -I/usr/include -o CMakeFiles/Platform.dir/Private/WindowImpl.cpp.o -c /home/ok/Code/stitchEngine/Engine/Platform/Private/WindowImpl.cpp",
+  "file": "/home/ok/Code/stitchEngine/Engine/Platform/Private/WindowImpl.cpp",
+  "output": "Engine/Platform/CMakeFiles/Platform.dir/Private/WindowImpl.cpp.o"
+},
+{
+  "directory": "/home/ok/Code/stitchEngine/Build/Engine/Platform",
+  "command": "/usr/bin/c++  -I/home/ok/Code/stitchEngine/Engine/Platform/Public -I/home/ok/Code/stitchEngine/Engine/Types/Public -std=c++20 -I/usr/include -o CMakeFiles/Platform.dir/Private/RendererImpl.cpp.o -c /home/ok/Code/stitchEngine/Engine/Platform/Private/RendererImpl.cpp",
+  "file": "/home/ok/Code/stitchEngine/Engine/Platform/Private/RendererImpl.cpp",
+  "output": "Engine/Platform/CMakeFiles/Platform.dir/Private/RendererImpl.cpp.o"
+},
+{
+  "directory": "/home/ok/Code/stitchEngine/Build/Engine/Core",
+  "command": "/usr/bin/c++  -I/home/ok/Code/stitchEngine/Engine/Core/Public -I/home/ok/Code/stitchEngine/Engine/Platform/Public -I/home/ok/Code/stitchEngine/Engine/Types/Public -std=c++20 -I/usr/include -o CMakeFiles/Core.dir/Private/CoreImpl.cpp.o -c /home/ok/Code/stitchEngine/Engine/Core/Private/CoreImpl.cpp",
+  "file": "/home/ok/Code/stitchEngine/Engine/Core/Private/CoreImpl.cpp",
+  "output": "Engine/Core/CMakeFiles/Core.dir/Private/CoreImpl.cpp.o"
 },
 {
   "directory": "/home/ok/Code/stitchEngine/Build/Game",
-  "command": "/usr/bin/c++  -I/home/ok/Code/stitchEngine/Engine/Platform/Public -std=c++20 -o CMakeFiles/Game.dir/src/main.cpp.o -c /home/ok/Code/stitchEngine/Game/src/main.cpp",
+  "command": "/usr/bin/c++  -I/home/ok/Code/stitchEngine/Engine/Platform/Public -I/home/ok/Code/stitchEngine/Engine/Types/Public -I/home/ok/Code/stitchEngine/Engine/Core/Public -std=c++20 -I/usr/include -o CMakeFiles/Game.dir/src/main.cpp.o -c /home/ok/Code/stitchEngine/Game/src/main.cpp",
   "file": "/home/ok/Code/stitchEngine/Game/src/main.cpp",
   "output": "Game/CMakeFiles/Game.dir/src/main.cpp.o"
 }

@@ -1,18 +1,7 @@
 #pragma once
 
-#include "Renderer.hpp"
-#include <cstdint>
+#include "Types.hpp"
 #include <memory>
-#include <string>
-
-struct WindowConfig {
-  uint16_t w, h;
-  std::string title;
-  WindowConfig() : w(640), h(480), title("") {}
-  WindowConfig(uint16_t w, uint16_t h, std::string title)
-      : w(w), h(h), title(title) {}
-  WindowConfig(std::string title) : w(640), h(480), title(title) {}
-};
 
 class Window {
 private:
@@ -26,7 +15,7 @@ public:
   Window(WindowConfig cfg) : cfg(cfg) {}
   virtual bool IsRunning() = 0;
   virtual void Init() = 0;
-  virtual void Draw(Renderer *renderer) = 0;
+  virtual void Draw() = 0;
 };
 
 std::unique_ptr<Window> GetWindow(WindowConfig windowConfig);

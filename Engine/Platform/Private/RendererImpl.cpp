@@ -49,6 +49,6 @@ public:
   }
 };
 
-std::unique_ptr<Renderer> GetRenderer() {
-  return std::make_unique<RendererImpl>();
+std::shared_ptr<Renderer> GetRenderer() {
+  return std::make_shared<RendererImpl>();
 };
