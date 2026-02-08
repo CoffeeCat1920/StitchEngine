@@ -1,3 +1,4 @@
+#include "Renderer.hpp"
 #include "Window.hpp"
 #include <memory>
 #include <raylib.h>
@@ -15,14 +16,13 @@ public:
     SetTargetFPS(60);
   }
 
-  void Draw() override {
-    while (!WindowShouldClose()) {
-      BeginDrawing();
-      ClearBackground(GRAY);
-      EndDrawing();
-    }
-    CloseWindow();
+  void Draw(std::shared_ptr<Renderer> renderer) override {
+    BeginDrawing();
+    ClearBackground(GRAY);
+    renderer->RenderQueue();
+    EndDrawing();
   }
+  void Close() override { CloseWindow(); }
 
   bool IsRunning() override { return !WindowShouldClose(); }
 };
