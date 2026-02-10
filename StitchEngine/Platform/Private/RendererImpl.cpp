@@ -7,8 +7,8 @@
 
 class RendererImpl : public Renderer {
 private:
-  std::unordered_map<Sprite, Texture2D> textures;
-  std::stack<Sprite> availableIds;
+  std::unordered_map<SpriteId, Texture2D> textures;
+  std::stack<SpriteId> availableIds;
   std::queue<RenderCommand> renderQueue;
 
 public:
@@ -18,11 +18,11 @@ public:
     }
   }
 
-  Sprite RegisterTexture(std::string path) override {
+  SpriteId RegisterTexture(std::string path) override {
     if (availableIds.empty()) {
       return 0;
     }
-    Sprite id = availableIds.top();
+    SpriteId id = availableIds.top();
     availableIds.pop();
     textures[id] = LoadTexture(path.c_str());
     return id;

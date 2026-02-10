@@ -5,14 +5,14 @@
 #include <string>
 
 struct RenderCommand {
-  Sprite textureId;
+  SpriteId textureId;
   int x, y;
 };
 
 class Renderer {
 public:
   virtual ~Renderer() = default;
-  virtual Sprite RegisterTexture(std::string path) = 0;
+  virtual SpriteId RegisterTexture(std::string path) = 0;
   virtual void QueueCommand(RenderCommand command) = 0;
   virtual void RenderQueue() = 0;
 };

@@ -12,6 +12,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/Build")
 add_subdirectory(Platform)
 add_subdirectory(Engine)
 add_subdirectory(Types)
+add_subdirectory(Graphics)
 
 add_library(Core INTERFACE)
 
