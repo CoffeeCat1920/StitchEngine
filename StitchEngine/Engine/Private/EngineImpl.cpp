@@ -9,7 +9,7 @@ class EnineImpl : public Engine {
 private:
   std::unique_ptr<Window> window;
   std::shared_ptr<Renderer> renderer;
-  Sprite sprite;
+  SpriteId sprite;
 
 public:
   EnineImpl(WindowConfig windowCfg) {

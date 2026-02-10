@@ -18,10 +18,10 @@
   "output": "StitchEngine/Engine/CMakeFiles/Engine.dir/Private/EngineImpl.cpp.o"
 },
 {
-  "directory": "/home/ok/Code/stitchEngine/Build/StitchEngine/Graphics",
-  "command": "/usr/bin/c++  -I/home/ok/Code/stitchEngine/StitchEngine/Graphics/Public -I/home/ok/Code/stitchEngine/StitchEngine/Platform/Public -I/home/ok/Code/stitchEngine/StitchEngine/Types/Public -std=c++20 -I/usr/include -o CMakeFiles/Graphics.dir/Private/GraphicsImpl.cpp.o -c /home/ok/Code/stitchEngine/StitchEngine/Graphics/Private/GraphicsImpl.cpp",
-  "file": "/home/ok/Code/stitchEngine/StitchEngine/Graphics/Private/GraphicsImpl.cpp",
-  "output": "StitchEngine/Graphics/CMakeFiles/Graphics.dir/Private/GraphicsImpl.cpp.o"
+  "directory": "/home/ok/Code/stitchEngine/Build/StitchEngine/GraphicsManager",
+  "command": "/usr/bin/c++  -I/home/ok/Code/stitchEngine/StitchEngine/GraphicsManager/Public -I/home/ok/Code/stitchEngine/StitchEngine/Platform/Public -I/home/ok/Code/stitchEngine/StitchEngine/Types/Public -std=c++20 -I/usr/include -o CMakeFiles/GraphicsManager.dir/Private/GraphicsManagerImpl.cpp.o -c /home/ok/Code/stitchEngine/StitchEngine/GraphicsManager/Private/GraphicsManagerImpl.cpp",
+  "file": "/home/ok/Code/stitchEngine/StitchEngine/GraphicsManager/Private/GraphicsManagerImpl.cpp",
+  "output": "StitchEngine/GraphicsManager/CMakeFiles/GraphicsManager.dir/Private/GraphicsManagerImpl.cpp.o"
 },
 {
   "directory": "/home/ok/Code/stitchEngine/Build/Game",
