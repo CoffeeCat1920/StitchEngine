@@ -1,10 +1,8 @@
 #pragma once
 
-#include <cstdint>
+#include "RenderTypes.hpp"
 #include <memory>
 #include <string>
-
-using Sprite = uint8_t;
 
 struct RenderCommand {
   Sprite textureId;

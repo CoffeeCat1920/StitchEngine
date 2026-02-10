@@ -1,8 +1,8 @@
-#include "Core.hpp"
+#include "Engine.hpp"
 #include "WindowTypes.hpp"
 
 int main() {
-  auto core = GetCore(WindowConfig{.w = 640, .h = 320, .title = "Candela"});
-  core->Init();
-  core->Run();
+  auto engine = GetEngine(WindowConfig{.w = 640, .h = 320, .title = "Candela"});
+  engine->Init();
+  engine->Run();
 }

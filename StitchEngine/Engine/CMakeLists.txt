@@ -1,23 +1,23 @@
-add_library(Core STATIC)
+add_library(Engine STATIC)
 
-target_sources(Core
+target_sources(Engine
   PRIVATE
-    Private/CoreImpl.cpp
+    Private/EngineImpl.cpp
   PUBLIC
     FILE_SET HEADERS
     BASE_DIRS Public
     FILES
-    Public/Core.hpp
+    Public/Engine.hpp
 )
 
-target_include_directories(Core
+target_include_directories(Engine
   PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/Public
 )
 
 find_package(raylib REQUIRED)
 
-target_link_libraries(Core
+target_link_libraries(Engine
   PUBLIC raylib 
   PUBLIC Platform 
 )

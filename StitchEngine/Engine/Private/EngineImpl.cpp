@@ -1,18 +1,18 @@
-#include "Core.hpp"
+#include "Engine.hpp"
 #include "Renderer.hpp"
 #include "Window.hpp"
 
 #include <iostream>
 #include <memory>
 
-class CoreImpl : public Core {
+class EnineImpl : public Engine {
 private:
   std::unique_ptr<Window> window;
   std::shared_ptr<Renderer> renderer;
   Sprite sprite;
 
 public:
-  CoreImpl(WindowConfig windowCfg) {
+  EnineImpl(WindowConfig windowCfg) {
     window = GetWindow(windowCfg);
     renderer = GetRenderer();
   }
@@ -37,6 +37,6 @@ public:
   }
 };
 
-std::unique_ptr<Core> GetCore(WindowConfig config) {
-  return std::make_unique<CoreImpl>(config);
+std::unique_ptr<Engine> GetEngine(WindowConfig config) {
+  return std::make_unique<EnineImpl>(config);
 }

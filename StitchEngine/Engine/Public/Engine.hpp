@@ -4,10 +4,10 @@
 
 #include <memory>
 
-class Core {
+class Engine {
 public:
   virtual void Init() = 0;
   virtual void Run() = 0;
 };
 
-std::unique_ptr<Core> GetCore(WindowConfig config);
+std::unique_ptr<Engine> GetEngine(WindowConfig config);
