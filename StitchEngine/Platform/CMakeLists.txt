@@ -1,25 +1,9 @@
-add_library(Platform STATIC)
+add_subdirectory(Window)
+add_subdirectory(Renderer)
 
-target_sources(Platform
-  PRIVATE
-    Private/WindowImpl.cpp
-    Private/RendererImpl.cpp
-  PUBLIC
-    FILE_SET HEADERS
-    BASE_DIRS Public
-    FILES
-      Public/Window.hpp
-      Public/Renderer.hpp
-)
-
-target_include_directories(Platform
-  PUBLIC
-    ${CMAKE_CURRENT_SOURCE_DIR}/Public
-)
-
-find_package(raylib REQUIRED)
+add_library(Platform INTERFACE)
 
 target_link_libraries(Platform
-  PUBLIC raylib 
-  PUBLIC Types
+  INTERFACE Window 
+  INTERFACE Renderer 
 )

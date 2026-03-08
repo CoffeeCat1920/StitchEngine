@@ -2,13 +2,12 @@
 #include "Renderer.hpp"
 #include "Window.hpp"
 
-#include <iostream>
 #include <memory>
 
 class EnineImpl : public Engine {
 private:
   std::unique_ptr<Window> window;
-  std::shared_ptr<Renderer> renderer;
+  std::shared_ptr<RenderManager> renderer;
   SpriteId sprite;
 
 public:
@@ -22,14 +21,13 @@ public:
 
     sprite = renderer->RegisterTexture(
         "/home/ok/Code/stitchEngine/Game/src/cat.jpg");
-    std::cout << sprite << "\n";
   }
 
   void Run() override {
     while (window->IsRunning()) {
-      window->BeginFrame();
       renderer->QueueCommand(
           RenderCommand{.textureId = sprite, .x = 0, .y = 0});
+      window->BeginFrame();
       renderer->RenderQueue();
       window->EndFrame();
     }

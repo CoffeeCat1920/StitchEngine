@@ -11,6 +11,8 @@ public:
 
   void Init() override {
     WindowConfig cfg = Window::GetConfig();
+    SetConfigFlags(FLAG_WINDOW_RESIZABLE | FLAG_WINDOW_UNFOCUSED |
+                   FLAG_BORDERLESS_WINDOWED_MODE);
     InitWindow(cfg.w, cfg.h, cfg.title.c_str());
     SetTargetFPS(60);
   }

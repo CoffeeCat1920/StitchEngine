@@ -9,12 +9,12 @@ struct RenderCommand {
   int x, y;
 };
 
-class Renderer {
+class RenderManager {
 public:
-  virtual ~Renderer() = default;
+  virtual ~RenderManager() = default;
   virtual SpriteId RegisterTexture(std::string path) = 0;
   virtual void QueueCommand(RenderCommand command) = 0;
   virtual void RenderQueue() = 0;
 };
 
-std::shared_ptr<Renderer> GetRenderer();
+std::shared_ptr<RenderManager> GetRenderer();

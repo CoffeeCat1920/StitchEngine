@@ -19,4 +19,6 @@ add_library(Core INTERFACE)
 target_link_libraries(Core
   INTERFACE Platform
   INTERFACE Engine 
+  INTERFACE Types
+  INTERFACE GraphicsManager
 )

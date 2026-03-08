@@ -5,14 +5,14 @@
 #include <stack>
 #include <unordered_map>
 
-class RendererImpl : public Renderer {
+class RenderManagerImpl : public RenderManager {
 private:
   std::unordered_map<SpriteId, Texture2D> textures;
   std::stack<SpriteId> availableIds;
   std::queue<RenderCommand> renderQueue;
 
 public:
-  RendererImpl() {
+  RenderManagerImpl() {
     for (int i = 1; i <= 255; i++) {
       availableIds.push(i);
     }
@@ -49,6 +49,6 @@ public:
   }
 };
 
-std::shared_ptr<Renderer> GetRenderer() {
-  return std::make_shared<RendererImpl>();
+std::shared_ptr<RenderManager> GetRenderer() {
+  return std::make_shared<RenderManagerImpl>();
 };
