@@ -18,10 +18,16 @@
   "output": "StitchEngine/Engine/CMakeFiles/Engine.dir/Private/EngineImpl.cpp.o"
 },
 {
-  "directory": "/home/ok/Code/stitchEngine/Build/StitchEngine/GraphicsManager",
-  "command": "/usr/bin/c++  -I/home/ok/Code/stitchEngine/StitchEngine/GraphicsManager/Public -I/home/ok/Code/stitchEngine/StitchEngine/Platform/Window/Public -I/home/ok/Code/stitchEngine/StitchEngine/Types/Public -I/home/ok/Code/stitchEngine/StitchEngine/Platform/Renderer/Public -std=c++20 -I/usr/include -o CMakeFiles/GraphicsManager.dir/Private/GraphicsManagerImpl.cpp.o -c /home/ok/Code/stitchEngine/StitchEngine/GraphicsManager/Private/GraphicsManagerImpl.cpp",
-  "file": "/home/ok/Code/stitchEngine/StitchEngine/GraphicsManager/Private/GraphicsManagerImpl.cpp",
-  "output": "StitchEngine/GraphicsManager/CMakeFiles/GraphicsManager.dir/Private/GraphicsManagerImpl.cpp.o"
+  "directory": "/home/ok/Code/stitchEngine/Build/StitchEngine/ResourceManager",
+  "command": "/usr/bin/c++  -I/home/ok/Code/stitchEngine/StitchEngine/ResourceManager/Public -I/home/ok/Code/stitchEngine/StitchEngine/Platform/Window/Public -I/home/ok/Code/stitchEngine/StitchEngine/Types/Public -I/home/ok/Code/stitchEngine/StitchEngine/Platform/Renderer/Public -std=c++20 -I/usr/include -o CMakeFiles/ResourceManager.dir/Private/ResourceManagerImpl.cpp.o -c /home/ok/Code/stitchEngine/StitchEngine/ResourceManager/Private/ResourceManagerImpl.cpp",
+  "file": "/home/ok/Code/stitchEngine/StitchEngine/ResourceManager/Private/ResourceManagerImpl.cpp",
+  "output": "StitchEngine/ResourceManager/CMakeFiles/ResourceManager.dir/Private/ResourceManagerImpl.cpp.o"
+},
+{
+  "directory": "/home/ok/Code/stitchEngine/Build/StitchEngine/ResourceManager/TextureManager",
+  "command": "/usr/bin/c++  -I/home/ok/Code/stitchEngine/StitchEngine/ResourceManager/TextureManager/Public -I/home/ok/Code/stitchEngine/StitchEngine/Platform/Window/Public -I/home/ok/Code/stitchEngine/StitchEngine/Types/Public -I/home/ok/Code/stitchEngine/StitchEngine/Platform/Renderer/Public -std=c++20 -I/usr/include -o CMakeFiles/TextureManager.dir/Private/TextureManagerImpl.cpp.o -c /home/ok/Code/stitchEngine/StitchEngine/ResourceManager/TextureManager/Private/TextureManagerImpl.cpp",
+  "file": "/home/ok/Code/stitchEngine/StitchEngine/ResourceManager/TextureManager/Private/TextureManagerImpl.cpp",
+  "output": "StitchEngine/ResourceManager/TextureManager/CMakeFiles/TextureManager.dir/Private/TextureManagerImpl.cpp.o"
 },
 {
   "directory": "/home/ok/Code/stitchEngine/Build/Game",

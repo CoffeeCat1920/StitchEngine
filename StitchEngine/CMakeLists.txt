@@ -12,7 +12,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/Build")
 add_subdirectory(Platform)
 add_subdirectory(Engine)
 add_subdirectory(Types)
-add_subdirectory(GraphicsManager)
+add_subdirectory(ResourceManager)
 
 add_library(Core INTERFACE)
 
@@ -20,5 +20,5 @@ target_link_libraries(Core
   INTERFACE Platform
   INTERFACE Engine 
   INTERFACE Types
-  INTERFACE GraphicsManager
+  INTERFACE ResourceManager
 )
