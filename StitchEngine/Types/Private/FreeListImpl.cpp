@@ -2,26 +2,36 @@
 
 template <class T> FreeList<T>::FreeList() : first_free(-1) {}
 
-template <class T> FreeList<T>::Handler FreeList<T>::Insert(const T &element) {
-  if (first_free == -1) {
-    int index = elements.size();
-    FreeElement fElement = FreeElement{.data = element};
-    Element element = Element{.element = fElement, .gen = 0};
-    elements.push_back(element);
-    return Handler{.index = index, .gen = 0};
+template <class T> int FreeList<T>::Insert(const T &element) {
+  if (first_free != -1) {
+    const int index = first_free;
+    first_free = data[first_free].next;
+    data[index].element = element;
+    return index;
   } else {
-    int index = first_free;
-    first_free = elements[first_free].element.next;
-    elements[first_free].element.data = element;
-    return Handler{.index = index, .gen = elements[index].gen};
+    FreeElement fe;
+    fe.element = element;
+    data.push_back(fe);
+    return data.size() - 1;
   }
 }
 
-template <class T> void FreeList<T>::Erase(FreeList<T>::Handler handler) {
-  assert(handler.index < elements.size());
-  assert(elements[handler.index].element.gen == handler.gen);
-  int index = handler.index;
-  elements[index].gen++;
-  elements[index].element.next = first_free;
-  first_free = index;
+template <class T> void FreeList<T>::Erase(int n) {
+  data[n].next = first_free;
+  first_free = n;
+}
+
+template <class T> void FreeList<T>::Clear() {
+  data.clear();
+  first_free = -1;
+}
+
+template <class T> int FreeList<T>::Range() const {
+  return static_cast<int>(data.size());
+}
+
+template <class T> T &FreeList<T>::operator[](int n) { return data[n].element; }
+
+template <class T> const T &FreeList<T>::operator[](int n) const {
+  return data[n].element;
 }

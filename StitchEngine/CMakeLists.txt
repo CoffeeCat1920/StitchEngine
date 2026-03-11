@@ -13,6 +13,7 @@ add_subdirectory(Platform)
 add_subdirectory(Engine)
 add_subdirectory(Types)
 add_subdirectory(ResourceManager)
+add_subdirectory(Assertions)
 
 add_library(Core INTERFACE)
 
@@ -21,4 +22,5 @@ target_link_libraries(Core
   INTERFACE Engine 
   INTERFACE Types
   INTERFACE ResourceManager
+  INTERFACE Assertions
 )

@@ -6,30 +6,21 @@ template <class T> class FreeList {
 public:
   FreeList();
 
-  struct Handler {
-    int index;
-    int gen = 0;
-  };
-
-  Handler Insert(const T &element);
-  void Erase(Handler handler);
+  int Insert(const T &element);
+  void Erase(int n);
   void Clear();
+  int Range() const;
 
-  T &operator[](Handler handler);
-  const T &operator[](Handler handler) const;
+  T &operator[](int n);
+
+  // Returns the nth element.
+  const T &operator[](int n) const;
 
 private:
   union FreeElement {
-    T data;
+    T element;
     int next;
   };
-
-  struct Element {
-    FreeElement element;
-    int gen;
-  };
-
-  std::vector<Element> elements;
-
+  std::vector<FreeElement> data;
   int first_free;
 };

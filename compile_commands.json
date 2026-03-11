@@ -1,37 +1,37 @@
 [
 {
   "directory": "/home/ok/Code/stitchEngine/Build/StitchEngine/Platform/Window",
-  "command": "/usr/bin/c++  -I/home/ok/Code/stitchEngine/StitchEngine/Platform/Window/Public -I/home/ok/Code/stitchEngine/StitchEngine/Types/Public -std=c++20 -I/usr/include -o CMakeFiles/Window.dir/Private/WindowImpl.cpp.o -c /home/ok/Code/stitchEngine/StitchEngine/Platform/Window/Private/WindowImpl.cpp",
+  "command": "/usr/bin/c++  -I/home/ok/Code/stitchEngine/StitchEngine/Platform/Window/Public -I/home/ok/Code/stitchEngine/StitchEngine/Types/Public -I/home/ok/Code/stitchEngine/StitchEngine/Assertions/Public -std=c++20 -I/usr/include -o CMakeFiles/Window.dir/Private/WindowImpl.cpp.o -c /home/ok/Code/stitchEngine/StitchEngine/Platform/Window/Private/WindowImpl.cpp",
   "file": "/home/ok/Code/stitchEngine/StitchEngine/Platform/Window/Private/WindowImpl.cpp",
   "output": "StitchEngine/Platform/Window/CMakeFiles/Window.dir/Private/WindowImpl.cpp.o"
 },
 {
   "directory": "/home/ok/Code/stitchEngine/Build/StitchEngine/Platform/Renderer",
-  "command": "/usr/bin/c++  -I/home/ok/Code/stitchEngine/StitchEngine/Platform/Renderer/Public -I/home/ok/Code/stitchEngine/StitchEngine/Types/Public -std=c++20 -I/usr/include -o CMakeFiles/Renderer.dir/Private/RendererImpl.cpp.o -c /home/ok/Code/stitchEngine/StitchEngine/Platform/Renderer/Private/RendererImpl.cpp",
+  "command": "/usr/bin/c++  -I/home/ok/Code/stitchEngine/StitchEngine/Platform/Renderer/Public -I/home/ok/Code/stitchEngine/StitchEngine/Types/Public -I/home/ok/Code/stitchEngine/StitchEngine/Assertions/Public -std=c++20 -I/usr/include -o CMakeFiles/Renderer.dir/Private/RendererImpl.cpp.o -c /home/ok/Code/stitchEngine/StitchEngine/Platform/Renderer/Private/RendererImpl.cpp",
   "file": "/home/ok/Code/stitchEngine/StitchEngine/Platform/Renderer/Private/RendererImpl.cpp",
   "output": "StitchEngine/Platform/Renderer/CMakeFiles/Renderer.dir/Private/RendererImpl.cpp.o"
 },
 {
   "directory": "/home/ok/Code/stitchEngine/Build/StitchEngine/Engine",
-  "command": "/usr/bin/c++  -I/home/ok/Code/stitchEngine/StitchEngine/Engine/Public -I/home/ok/Code/stitchEngine/StitchEngine/Platform/Window/Public -I/home/ok/Code/stitchEngine/StitchEngine/Types/Public -I/home/ok/Code/stitchEngine/StitchEngine/Platform/Renderer/Public -std=c++20 -I/usr/include -o CMakeFiles/Engine.dir/Private/EngineImpl.cpp.o -c /home/ok/Code/stitchEngine/StitchEngine/Engine/Private/EngineImpl.cpp",
+  "command": "/usr/bin/c++  -I/home/ok/Code/stitchEngine/StitchEngine/Engine/Public -I/home/ok/Code/stitchEngine/StitchEngine/Platform/Window/Public -I/home/ok/Code/stitchEngine/StitchEngine/Types/Public -I/home/ok/Code/stitchEngine/StitchEngine/Assertions/Public -I/home/ok/Code/stitchEngine/StitchEngine/Platform/Renderer/Public -std=c++20 -I/usr/include -o CMakeFiles/Engine.dir/Private/EngineImpl.cpp.o -c /home/ok/Code/stitchEngine/StitchEngine/Engine/Private/EngineImpl.cpp",
   "file": "/home/ok/Code/stitchEngine/StitchEngine/Engine/Private/EngineImpl.cpp",
   "output": "StitchEngine/Engine/CMakeFiles/Engine.dir/Private/EngineImpl.cpp.o"
 },
 {
   "directory": "/home/ok/Code/stitchEngine/Build/StitchEngine/ResourceManager",
-  "command": "/usr/bin/c++  -I/home/ok/Code/stitchEngine/StitchEngine/ResourceManager/Public -I/home/ok/Code/stitchEngine/StitchEngine/Platform/Window/Public -I/home/ok/Code/stitchEngine/StitchEngine/Types/Public -I/home/ok/Code/stitchEngine/StitchEngine/Platform/Renderer/Public -std=c++20 -I/usr/include -o CMakeFiles/ResourceManager.dir/Private/ResourceManagerImpl.cpp.o -c /home/ok/Code/stitchEngine/StitchEngine/ResourceManager/Private/ResourceManagerImpl.cpp",
+  "command": "/usr/bin/c++  -I/home/ok/Code/stitchEngine/StitchEngine/ResourceManager/Public -I/home/ok/Code/stitchEngine/StitchEngine/Platform/Window/Public -I/home/ok/Code/stitchEngine/StitchEngine/Types/Public -I/home/ok/Code/stitchEngine/StitchEngine/Assertions/Public -I/home/ok/Code/stitchEngine/StitchEngine/Platform/Renderer/Public -std=c++20 -I/usr/include -o CMakeFiles/ResourceManager.dir/Private/ResourceManagerImpl.cpp.o -c /home/ok/Code/stitchEngine/StitchEngine/ResourceManager/Private/ResourceManagerImpl.cpp",
   "file": "/home/ok/Code/stitchEngine/StitchEngine/ResourceManager/Private/ResourceManagerImpl.cpp",
   "output": "StitchEngine/ResourceManager/CMakeFiles/ResourceManager.dir/Private/ResourceManagerImpl.cpp.o"
 },
 {
   "directory": "/home/ok/Code/stitchEngine/Build/StitchEngine/ResourceManager/TextureManager",
-  "command": "/usr/bin/c++  -I/home/ok/Code/stitchEngine/StitchEngine/ResourceManager/TextureManager/Public -I/home/ok/Code/stitchEngine/StitchEngine/Platform/Window/Public -I/home/ok/Code/stitchEngine/StitchEngine/Types/Public -I/home/ok/Code/stitchEngine/StitchEngine/Platform/Renderer/Public -std=c++20 -I/usr/include -o CMakeFiles/TextureManager.dir/Private/TextureManagerImpl.cpp.o -c /home/ok/Code/stitchEngine/StitchEngine/ResourceManager/TextureManager/Private/TextureManagerImpl.cpp",
+  "command": "/usr/bin/c++  -I/home/ok/Code/stitchEngine/StitchEngine/ResourceManager/TextureManager/Public -I/home/ok/Code/stitchEngine/StitchEngine/Platform/Window/Public -I/home/ok/Code/stitchEngine/StitchEngine/Types/Public -I/home/ok/Code/stitchEngine/StitchEngine/Assertions/Public -I/home/ok/Code/stitchEngine/StitchEngine/Platform/Renderer/Public -std=c++20 -I/usr/include -o CMakeFiles/TextureManager.dir/Private/TextureManagerImpl.cpp.o -c /home/ok/Code/stitchEngine/StitchEngine/ResourceManager/TextureManager/Private/TextureManagerImpl.cpp",
   "file": "/home/ok/Code/stitchEngine/StitchEngine/ResourceManager/TextureManager/Private/TextureManagerImpl.cpp",
   "output": "StitchEngine/ResourceManager/TextureManager/CMakeFiles/TextureManager.dir/Private/TextureManagerImpl.cpp.o"
 },
 {
   "directory": "/home/ok/Code/stitchEngine/Build/Game",
-  "command": "/usr/bin/c++  -I/home/ok/Code/stitchEngine/StitchEngine/Engine/Public -I/home/ok/Code/stitchEngine/StitchEngine/Platform/Window/Public -I/home/ok/Code/stitchEngine/StitchEngine/Types/Public -I/home/ok/Code/stitchEngine/StitchEngine/Platform/Renderer/Public -std=c++20 -I/usr/include -o CMakeFiles/Game.dir/src/main.cpp.o -c /home/ok/Code/stitchEngine/Game/src/main.cpp",
+  "command": "/usr/bin/c++  -I/home/ok/Code/stitchEngine/StitchEngine/Engine/Public -I/home/ok/Code/stitchEngine/StitchEngine/Platform/Window/Public -I/home/ok/Code/stitchEngine/StitchEngine/Types/Public -I/home/ok/Code/stitchEngine/StitchEngine/Assertions/Public -I/home/ok/Code/stitchEngine/StitchEngine/Platform/Renderer/Public -std=c++20 -I/usr/include -o CMakeFiles/Game.dir/src/main.cpp.o -c /home/ok/Code/stitchEngine/Game/src/main.cpp",
   "file": "/home/ok/Code/stitchEngine/Game/src/main.cpp",
   "output": "Game/CMakeFiles/Game.dir/src/main.cpp.o"
 }
