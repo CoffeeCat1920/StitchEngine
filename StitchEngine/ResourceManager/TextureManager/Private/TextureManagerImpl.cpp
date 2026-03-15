@@ -15,5 +15,7 @@ public:
     return this->renderManager->RegisterTexture(path);
   }
 
-  void UnloadTexture(SpriteId spriteId) override {}
+  void UnloadTexture(SpriteId spriteId) override {
+    this->renderManager->FreeTexture(spriteId);
+  }
 };
