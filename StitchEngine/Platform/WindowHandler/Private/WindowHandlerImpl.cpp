@@ -1,16 +1,17 @@
 #include "WindowHandler.hpp"
-#include <memory>
+#include "RenderHandler.hpp"
 #include <raylib.h>
 
-class RaylibWindow : public Window {
+class WindowHandlerImpl : public WindowHandler {
 private:
+  RenderHandler& g_renderHandler = GetRenderHandler();
 public:
-  RaylibWindow(WindowConfig cfg) : Window(cfg) {}
+  WindowHandlerImpl(WindowConfig cfg) : WindowHandler(cfg) {}
 
-  ~RaylibWindow() {}
+  ~WindowHandlerImpl() {}
 
   void Init() override {
-    WindowConfig cfg = Window::GetConfig();
+    WindowConfig cfg = WindowHandler::GetConfig();
     SetConfigFlags(FLAG_WINDOW_RESIZABLE | FLAG_WINDOW_UNFOCUSED |
                    FLAG_BORDERLESS_WINDOWED_MODE);
     InitWindow(cfg.w, cfg.h, cfg.title.c_str());
@@ -20,6 +21,7 @@ public:
   void BeginFrame() override {
     BeginDrawing();
     ClearBackground(GRAY);
+    g_renderHandler.RenderQueue();
   }
 
   void EndFrame() override { EndDrawing(); }
@@ -29,6 +31,7 @@ public:
   bool IsRunning() override { return !WindowShouldClose(); }
 };
 
-std::unique_ptr<Window> GetWindow(WindowConfig windowConfig) {
-  return std::make_unique<RaylibWindow>(windowConfig);
+WindowHandler& GetWindow(WindowConfig windowConfig) {
+  static WindowHandlerImpl g_windowHandler(windowConfig); 
+  return g_windowHandler;
 }

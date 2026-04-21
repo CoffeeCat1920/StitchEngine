@@ -1,5 +1,3 @@
-add_subdirectory(TextureManager)
-
 add_library(ResourceManager STATIC)
 
 target_sources(ResourceManager
@@ -18,6 +16,5 @@ target_include_directories(ResourceManager
 )
 
 target_link_libraries(ResourceManager 
-  PUBLIC TextureManager 
   PUBLIC Platform 
 )

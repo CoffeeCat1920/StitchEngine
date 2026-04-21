@@ -2,18 +2,17 @@
 
 #include "RenderTypes.hpp"
 #include <memory>
-#include <string>
 
 struct RenderCommand {
   SpriteId textureId;
   int x, y;
 };
 
-class RenderManager {
+class RenderHandler {
 public:
-  virtual ~RenderManager() = default;
+  virtual ~RenderHandler() = default;
   virtual void QueueCommand(RenderCommand command) = 0;
   virtual void RenderQueue() = 0;
 };
 
-std::shared_ptr<RenderManager> GetRenderer();
+RenderHandler& GetRenderHandler();

@@ -5,7 +5,7 @@
 
 class EnineImpl : public Engine {
 private:
-  std::unique_ptr<Window> window;
+  std::unique_ptr<WindowHandler> window;
 
 public:
   EnineImpl(WindowConfig windowCfg) {

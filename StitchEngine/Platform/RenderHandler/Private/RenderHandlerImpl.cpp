@@ -1,16 +1,14 @@
-#include "FreeList.hpp"
 #include "RenderHandler.hpp"
-#include <memory>
-#include <queue>
+#include "TextureHandler.hpp"
 #include <raylib.h>
+#include <queue>
 
-class RenderManagerImpl : public RenderManager {
+class RenderHandlerImpl : public RenderHandler {
 private:
-  FreeList<Texture2D> textures;
-  std::queue<RenderCommand> renderQueue;
+  TextureHandler& g_textureHandler = GetTextureHandler();
 
 public:
-  RenderManagerImpl() {}
+  std::queue<RenderCommand> renderQueue;
 
   void QueueCommand(RenderCommand command) override {
     renderQueue.push(command);
@@ -21,11 +19,12 @@ public:
     while (!renderQueue.empty()) {
       RenderCommand command = renderQueue.front();
       renderQueue.pop();
-      DrawTexture(textures[command.textureId], command.x, command.y, WHITE);
+      DrawTexture(g_textureHandler.GetTexture(command.textureId), command.x, command.y, WHITE);
     }
   }
 };
 
-std::shared_ptr<RenderManager> GetRenderer() {
-  return std::make_shared<RenderManagerImpl>();
+RenderHandler& GetRenderHandler() {
+  static RenderHandlerImpl g_RenderHandler;
+  return g_RenderHandler;
 };
