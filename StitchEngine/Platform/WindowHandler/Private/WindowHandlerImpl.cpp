@@ -1,10 +1,8 @@
 #include "WindowHandler.hpp"
-#include "RenderHandler.hpp"
 #include <raylib.h>
 
 class WindowHandlerImpl : public WindowHandler {
 private:
-  RenderHandler& g_renderHandler = GetRenderHandler();
 public:
   WindowHandlerImpl(WindowConfig cfg) : WindowHandler(cfg) {}
 
@@ -21,7 +19,6 @@ public:
   void BeginFrame() override {
     BeginDrawing();
     ClearBackground(GRAY);
-    g_renderHandler.RenderQueue();
   }
 
   void EndFrame() override { EndDrawing(); }
@@ -31,7 +28,7 @@ public:
   bool IsRunning() override { return !WindowShouldClose(); }
 };
 
-WindowHandler& GetWindow(WindowConfig windowConfig) {
+WindowHandler& GetWindowHandler(WindowConfig windowConfig) {
   static WindowHandlerImpl g_windowHandler(windowConfig); 
   return g_windowHandler;
 }

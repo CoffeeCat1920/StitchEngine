@@ -19,6 +19,5 @@ find_package(raylib REQUIRED)
 
 target_link_libraries(WindowHandler
   PUBLIC raylib 
-  PUBLIC RenderHandler
   PUBLIC Types
 )

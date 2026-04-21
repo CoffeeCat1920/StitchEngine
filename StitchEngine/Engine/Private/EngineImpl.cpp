@@ -1,27 +1,34 @@
 #include "Engine.hpp"
 #include "WindowHandler.hpp"
+#include "RenderHandler.hpp"
+#include "TextureHandler.hpp"
 
 #include <memory>
 
 class EnineImpl : public Engine {
 private:
-  std::unique_ptr<WindowHandler> window;
+  WindowHandler& g_windowHandler;
+  RenderHandler& g_renderHandler;
+  TextureHandler& g_textureHandler;
 
 public:
-  EnineImpl(WindowConfig windowCfg) {
-    window = GetWindow(windowCfg);
-  }
+  EnineImpl(WindowConfig windowCfg) : 
+    g_windowHandler(GetWindowHandler(windowCfg)), 
+    g_renderHandler(GetRenderHandler()),
+    g_textureHandler(GetTextureHandler()) {}
 
   void Init() override {
-    window->Init();
+    g_windowHandler.Init();
   }
 
   void Run() override {
-    while (window->IsRunning()) {
-      window->BeginFrame();
-      window->EndFrame();
+    while (g_windowHandler.IsRunning()) {
+      g_windowHandler.BeginFrame();
+      g_renderHandler.RenderQueue();
+
+      g_windowHandler.EndFrame();
     }
-    window->Close();
+    g_windowHandler.Close();
   }
 };
 
