@@ -1,1 +1,0 @@
-/usr/sbin/c++ -Wl,--dependency-file=CMakeFiles/Game.dir/link.d CMakeFiles/Game.dir/src/main.cpp.o -o Game  ../Lib/libEngine.a ../Lib/libWindow.a ../Lib/libRenderer.a /usr/lib/libraylib.so
