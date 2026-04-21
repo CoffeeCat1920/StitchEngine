@@ -15,9 +15,6 @@ target_include_directories(Engine
     ${CMAKE_CURRENT_SOURCE_DIR}/Public
 )
 
-find_package(raylib REQUIRED)
-
 target_link_libraries(Engine
-  PUBLIC raylib 
   PUBLIC Platform 
 )

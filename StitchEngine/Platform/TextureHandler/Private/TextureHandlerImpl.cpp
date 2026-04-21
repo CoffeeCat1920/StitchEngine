@@ -1,4 +1,5 @@
 #include "FreeList.hpp"
+#include "RenderTypes.hpp"
 #include "TextureHandler.hpp"
 #include <cstdint>
 #include <raylib.h>
@@ -9,7 +10,13 @@ inline const uint16_t MAX_SPRITE_ID = UINT16_MAX;
 class TextureHanderImpl : public TextureHandler {
 private:
   FreeList<Texture2D> textures;
+
 public:
-  SpriteId LoadTexture(std::filesystem::path path) override {}
-  void UnloadTexture(SpriteId id) override {}
+  SpriteId RegisterSprite(std::filesystem::path path) override {
+    SpriteId id = textures.Insert(LoadTexture(path.c_str()));
+    return id;
+  }
+  void EraseSprite(SpriteId id) override {
+    textures.Erase(id);
+  }
 };

@@ -1,6 +1,5 @@
 #include "FreeList.hpp"
-#include "RenderTypes.hpp"
-#include "Renderer.hpp"
+#include "RenderHandler.hpp"
 #include <memory>
 #include <queue>
 #include <raylib.h>
@@ -12,13 +11,6 @@ private:
 
 public:
   RenderManagerImpl() {}
-
-  SpriteId RegisterTexture(std::string path) override {
-    SpriteId id = textures.Insert(LoadTexture(path.c_str()));
-    return id;
-  }
-
-  void FreeTexture(SpriteId spriteId) override { textures.Erase(spriteId); }
 
   void QueueCommand(RenderCommand command) override {
     renderQueue.push(command);

@@ -1,21 +1,16 @@
+#include "FreeList.hpp"
 #include "RenderTypes.hpp"
-#include "Renderer.hpp"
 #include "TextureManager.hpp"
-#include <memory>
+#include <raylib.h>
 
 class TextureManagerImpl : public TextureManager {
 private:
-  std::shared_ptr<RenderManager> renderManager;
+  FreeList<Texture2D> textures; 
 
 public:
-  TextureManagerImpl(std::shared_ptr<RenderManager> renderManager)
-      : renderManager(renderManager) {}
+  TextureManagerImpl(){}
 
-  SpriteId LoadTexture(std::filesystem::path path) override {
-    return this->renderManager->RegisterTexture(path);
-  }
+  SpriteId LoadTexture(std::filesystem::path path) override {}
 
-  void UnloadTexture(SpriteId spriteId) override {
-    this->renderManager->FreeTexture(spriteId);
-  }
+  void UnloadTexture(SpriteId spriteId) override {}
 };

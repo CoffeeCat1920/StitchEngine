@@ -5,6 +5,6 @@
 
 class TextureHandler {
 public:
-  virtual SpriteId LoadTexture(std::filesystem::path path) = 0; 
-  virtual void UnloadTexture(SpriteId id) = 0;
+  virtual SpriteId RegisterSprite(std::filesystem::path path) = 0; 
+  virtual void EraseSprite(SpriteId id) = 0;
 }; 
