@@ -18,6 +18,6 @@ target_include_directories(ResourceManager
 )
 
 target_link_libraries(ResourceManager 
-  INTERFACE TextureManager 
+  PUBLIC TextureManager 
   PUBLIC Platform 
 )

@@ -1,11 +1,11 @@
 #pragma once
 
-#include "Renderer.hpp"
-#include <memory>
+#include "RenderTypes.hpp"
+#include <filesystem>
 
 class ResourceManager {
 public:
-  ResourceManager(std::shared_ptr<RenderManager>);
-  virtual void LoadTexture() = 0;
-  virtual void UnloadTexture() = 0;
+  ResourceManager();
+  virtual void LoadTexture(std::filesystem::path path) = 0;
+  virtual void UnloadTexture(SpriteId spriteId) = 0;
 };

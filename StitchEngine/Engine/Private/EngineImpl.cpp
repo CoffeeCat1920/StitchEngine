@@ -8,8 +8,7 @@ class EnineImpl : public Engine {
 private:
   std::unique_ptr<Window> window;
   std::shared_ptr<RenderManager> renderer;
-  SpriteId sprite1;
-  SpriteId sprite2;
+  SpriteId sprite;
 
 public:
   EnineImpl(WindowConfig windowCfg) {
@@ -20,19 +19,14 @@ public:
   void Init() override {
     window->Init();
 
-    sprite1 = renderer->RegisterTexture(
-        "/home/ok/Code/stitchEngine/Game/src/cat.jpg");
-
-    sprite2 = renderer->RegisterTexture(
-        "/home/ok/Code/stitchEngine/Game/src/cat2.jpg");
+    sprite = renderer->RegisterTexture(
+        "lamar.png");
   }
 
   void Run() override {
     while (window->IsRunning()) {
       renderer->QueueCommand(
-          RenderCommand{.textureId = sprite1, .x = 0, .y = 0});
-      renderer->QueueCommand(
-          RenderCommand{.textureId = sprite2, .x = 0, .y = 0});
+          RenderCommand{.textureId = sprite, .x = 0, .y = 0});
       window->BeginFrame();
       renderer->RenderQueue();
       window->EndFrame();

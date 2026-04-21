@@ -1,0 +1,2 @@
+/usr/sbin/ar qc ../../../Lib/libWindow.a CMakeFiles/Window.dir/Private/WindowImpl.cpp.o
+/usr/sbin/ranlib ../../../Lib/libWindow.a

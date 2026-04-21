@@ -1,4 +1,4 @@
 #pragma once
 
 #include <cstdint>
-using SpriteId = uint8_t;
+using SpriteId = uint16_t;

@@ -1,6 +1,6 @@
 #pragma once
 
-#include <cassert> // optional if you want debug checks
+#include <cassert> 
 #include <vector>
 
 template <class T> class FreeList {
