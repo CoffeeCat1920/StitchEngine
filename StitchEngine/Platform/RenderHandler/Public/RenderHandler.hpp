@@ -15,4 +15,4 @@ public:
   virtual void RenderQueue() = 0;
 };
 
-RenderHandler& GetRenderHandler();
+RenderHandler &GetRenderHandler();

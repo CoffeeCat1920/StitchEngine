@@ -28,7 +28,7 @@ public:
   bool IsRunning() override { return !WindowShouldClose(); }
 };
 
-WindowHandler& GetWindowHandler(WindowConfig windowConfig) {
-  static WindowHandlerImpl g_windowHandler(windowConfig); 
+WindowHandler &GetWindowHandler(WindowConfig windowConfig) {
+  static WindowHandlerImpl g_windowHandler(windowConfig);
   return g_windowHandler;
 }

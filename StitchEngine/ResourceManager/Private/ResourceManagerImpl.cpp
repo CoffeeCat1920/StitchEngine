@@ -1,11 +1,14 @@
 #include "ResourceManager.hpp"
+#include "TextureHandler.hpp"
 
 class ResourceManagerImpl : public ResourceManager {
 private:
-public:
-  void LoadTexture(std::filesystem::path path) {
-  } 
+  TextureHandler &g_textureHandler = GetTextureHandler();
 
-  void UnloadTexture(SpriteId spriteId) {
+public:
+  void LoadSprite(std::filesystem::path path) override {
+    g_textureHandler.RegisterSprite(path);
   }
+
+  void UnloadSprite(SpriteId id) override { g_textureHandler.EraseSprite(id); }
 };

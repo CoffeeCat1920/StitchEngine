@@ -1,25 +1,23 @@
 #include "Engine.hpp"
-#include "WindowHandler.hpp"
 #include "RenderHandler.hpp"
 #include "TextureHandler.hpp"
+#include "WindowHandler.hpp"
 
 #include <memory>
 
 class EnineImpl : public Engine {
 private:
-  WindowHandler& g_windowHandler;
-  RenderHandler& g_renderHandler;
-  TextureHandler& g_textureHandler;
+  WindowHandler &g_windowHandler;
+  RenderHandler &g_renderHandler;
+  TextureHandler &g_textureHandler;
 
 public:
-  EnineImpl(WindowConfig windowCfg) : 
-    g_windowHandler(GetWindowHandler(windowCfg)), 
-    g_renderHandler(GetRenderHandler()),
-    g_textureHandler(GetTextureHandler()) {}
+  EnineImpl(WindowConfig windowCfg)
+      : g_windowHandler(GetWindowHandler(windowCfg)),
+        g_renderHandler(GetRenderHandler()),
+        g_textureHandler(GetTextureHandler()) {}
 
-  void Init() override {
-    g_windowHandler.Init();
-  }
+  void Init() override { g_windowHandler.Init(); }
 
   void Run() override {
     while (g_windowHandler.IsRunning()) {

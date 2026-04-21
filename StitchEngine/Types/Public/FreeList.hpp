@@ -1,6 +1,6 @@
 #pragma once
 
-#include <cassert> 
+#include <cassert>
 #include <vector>
 
 template <class T> class FreeList {

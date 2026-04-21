@@ -19,4 +19,4 @@ public:
   virtual void Close() = 0;
 };
 
-WindowHandler& GetWindowHandler(WindowConfig windowConfig);
+WindowHandler &GetWindowHandler(WindowConfig windowConfig);

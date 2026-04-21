@@ -6,6 +6,6 @@
 class ResourceManager {
 public:
   ResourceManager();
-  virtual void LoadTexture(std::filesystem::path path) = 0;
-  virtual void UnloadTexture(SpriteId spriteId) = 0;
+  virtual void LoadSprite(std::filesystem::path path) = 0;
+  virtual void UnloadSprite(SpriteId spriteId) = 0;
 };
