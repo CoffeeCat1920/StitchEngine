@@ -1,0 +1,2 @@
+/usr/sbin/ar qc ../../Lib/libWindowHandler.a CMakeFiles/WindowHandler.dir/Private/WindowHandlerImpl.cpp.o
+/usr/sbin/ranlib ../../Lib/libWindowHandler.a

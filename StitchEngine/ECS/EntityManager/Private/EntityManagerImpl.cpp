@@ -41,6 +41,7 @@ public:
   }
 };
 
-std::unique_ptr<EntityManager> CreateEntityManager() {
-  return std::make_unique<EntityManagerImpl>();
+EntityManager &GetEntityManager() {
+  static EntityManagerImpl g_EntityManager;
+  return g_EntityManager;
 }

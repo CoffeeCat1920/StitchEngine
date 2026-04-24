@@ -1,0 +1,2 @@
+/usr/sbin/ar qc ../../Lib/libTextureHandler.a CMakeFiles/TextureHandler.dir/Private/TextureHandlerImpl.cpp.o
+/usr/sbin/ranlib ../../Lib/libTextureHandler.a

@@ -18,14 +18,38 @@
   "output": "StitchEngine/Platform/TextureHandler/CMakeFiles/TextureHandler.dir/Private/TextureHandlerImpl.cpp.o"
 },
 {
+  "directory": "/home/ok/Code/StitchEngine/Build/StitchEngine/ECS",
+  "command": "/usr/sbin/c++  -I/home/ok/Code/StitchEngine/StitchEngine/ECS/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/EntityManager/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/ComponentArray/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/ComponentManager/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/SystemManager/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/ComponentRegistry/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/Utils/Public -I/home/ok/Code/StitchEngine/StitchEngine/Types/Public -I/home/ok/Code/StitchEngine/StitchEngine/vendor -std=c++20 -o CMakeFiles/ECS.dir/Private/ECS.cpp.o -c /home/ok/Code/StitchEngine/StitchEngine/ECS/Private/ECS.cpp",
+  "file": "/home/ok/Code/StitchEngine/StitchEngine/ECS/Private/ECS.cpp",
+  "output": "StitchEngine/ECS/CMakeFiles/ECS.dir/Private/ECS.cpp.o"
+},
+{
   "directory": "/home/ok/Code/StitchEngine/Build/StitchEngine/ECS/EntityManager",
   "command": "/usr/sbin/c++  -I/home/ok/Code/StitchEngine/StitchEngine/ECS/EntityManager/Public -I/home/ok/Code/StitchEngine/StitchEngine/Types/Public -std=c++20 -o CMakeFiles/EntityManager.dir/Private/EntityManagerImpl.cpp.o -c /home/ok/Code/StitchEngine/StitchEngine/ECS/EntityManager/Private/EntityManagerImpl.cpp",
   "file": "/home/ok/Code/StitchEngine/StitchEngine/ECS/EntityManager/Private/EntityManagerImpl.cpp",
   "output": "StitchEngine/ECS/EntityManager/CMakeFiles/EntityManager.dir/Private/EntityManagerImpl.cpp.o"
 },
 {
+  "directory": "/home/ok/Code/StitchEngine/Build/StitchEngine/ECS/ComponentManager",
+  "command": "/usr/sbin/c++  -I/home/ok/Code/StitchEngine/StitchEngine/ECS/ComponentManager/Public -I/home/ok/Code/StitchEngine/StitchEngine/Types/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/ComponentArray/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/EntityManager/Public -std=c++20 -o CMakeFiles/ComponentManager.dir/Private/ComponentManager.cpp.o -c /home/ok/Code/StitchEngine/StitchEngine/ECS/ComponentManager/Private/ComponentManager.cpp",
+  "file": "/home/ok/Code/StitchEngine/StitchEngine/ECS/ComponentManager/Private/ComponentManager.cpp",
+  "output": "StitchEngine/ECS/ComponentManager/CMakeFiles/ComponentManager.dir/Private/ComponentManager.cpp.o"
+},
+{
+  "directory": "/home/ok/Code/StitchEngine/Build/StitchEngine/ECS/ComponentRegistry",
+  "command": "/usr/sbin/c++  -I/home/ok/Code/StitchEngine/StitchEngine/ECS/ComponentRegistry/Public -I/home/ok/Code/StitchEngine/StitchEngine/vendor -I/home/ok/Code/StitchEngine/StitchEngine/Types/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/ComponentArray/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/EntityManager/Public -std=c++20 -o CMakeFiles/ComponentRegistry.dir/Private/ComponentRegistry.cpp.o -c /home/ok/Code/StitchEngine/StitchEngine/ECS/ComponentRegistry/Private/ComponentRegistry.cpp",
+  "file": "/home/ok/Code/StitchEngine/StitchEngine/ECS/ComponentRegistry/Private/ComponentRegistry.cpp",
+  "output": "StitchEngine/ECS/ComponentRegistry/CMakeFiles/ComponentRegistry.dir/Private/ComponentRegistry.cpp.o"
+},
+{
+  "directory": "/home/ok/Code/StitchEngine/Build/StitchEngine/ECS/SystemManager",
+  "command": "/usr/sbin/c++  -I/home/ok/Code/StitchEngine/StitchEngine/ECS/SystemManager/Public -I/home/ok/Code/StitchEngine/StitchEngine/Types/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/Utils/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/ComponentManager/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/ComponentArray/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/EntityManager/Public -std=c++20 -o CMakeFiles/SystemManager.dir/Private/SystemManager.cpp.o -c /home/ok/Code/StitchEngine/StitchEngine/ECS/SystemManager/Private/SystemManager.cpp",
+  "file": "/home/ok/Code/StitchEngine/StitchEngine/ECS/SystemManager/Private/SystemManager.cpp",
+  "output": "StitchEngine/ECS/SystemManager/CMakeFiles/SystemManager.dir/Private/SystemManager.cpp.o"
+},
+{
   "directory": "/home/ok/Code/StitchEngine/Build/StitchEngine/Engine",
-  "command": "/usr/sbin/c++  -I/home/ok/Code/StitchEngine/StitchEngine/Engine/Public -I/home/ok/Code/StitchEngine/StitchEngine/Platform/WindowHandler/Public -I/home/ok/Code/StitchEngine/StitchEngine/Types/Public -I/home/ok/Code/StitchEngine/StitchEngine/Platform/RenderHandler/Public -I/home/ok/Code/StitchEngine/StitchEngine/Platform/TextureHandler/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/EntityManager/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/ComponentArray/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/ComponentManager/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/SystemManager/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/ComponentRegistry/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/Utils/Public -I/home/ok/Code/StitchEngine/vendor/json/include -std=c++20 -o CMakeFiles/Engine.dir/Private/EngineImpl.cpp.o -c /home/ok/Code/StitchEngine/StitchEngine/Engine/Private/EngineImpl.cpp",
+  "command": "/usr/sbin/c++  -I/home/ok/Code/StitchEngine/StitchEngine/Engine/Public -I/home/ok/Code/StitchEngine/StitchEngine/Platform/WindowHandler/Public -I/home/ok/Code/StitchEngine/StitchEngine/Types/Public -I/home/ok/Code/StitchEngine/StitchEngine/Platform/RenderHandler/Public -I/home/ok/Code/StitchEngine/StitchEngine/Platform/TextureHandler/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/EntityManager/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/ComponentArray/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/ComponentManager/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/SystemManager/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/ComponentRegistry/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/Utils/Public -I/home/ok/Code/StitchEngine/StitchEngine/vendor -std=c++20 -o CMakeFiles/Engine.dir/Private/EngineImpl.cpp.o -c /home/ok/Code/StitchEngine/StitchEngine/Engine/Private/EngineImpl.cpp",
   "file": "/home/ok/Code/StitchEngine/StitchEngine/Engine/Private/EngineImpl.cpp",
   "output": "StitchEngine/Engine/CMakeFiles/Engine.dir/Private/EngineImpl.cpp.o"
 },
@@ -37,7 +61,7 @@
 },
 {
   "directory": "/home/ok/Code/StitchEngine/Build/Game",
-  "command": "/usr/sbin/c++  -I/home/ok/Code/StitchEngine/StitchEngine/Engine/Public -I/home/ok/Code/StitchEngine/StitchEngine/Platform/WindowHandler/Public -I/home/ok/Code/StitchEngine/StitchEngine/Types/Public -I/home/ok/Code/StitchEngine/StitchEngine/Platform/RenderHandler/Public -I/home/ok/Code/StitchEngine/StitchEngine/Platform/TextureHandler/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/EntityManager/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/ComponentArray/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/ComponentManager/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/SystemManager/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/ComponentRegistry/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/Utils/Public -I/home/ok/Code/StitchEngine/vendor/json/include -std=c++20 -o CMakeFiles/Game.dir/src/main.cpp.o -c /home/ok/Code/StitchEngine/Game/src/main.cpp",
+  "command": "/usr/sbin/c++  -I/home/ok/Code/StitchEngine/StitchEngine/Engine/Public -I/home/ok/Code/StitchEngine/StitchEngine/Platform/WindowHandler/Public -I/home/ok/Code/StitchEngine/StitchEngine/Types/Public -I/home/ok/Code/StitchEngine/StitchEngine/Platform/RenderHandler/Public -I/home/ok/Code/StitchEngine/StitchEngine/Platform/TextureHandler/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/EntityManager/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/ComponentArray/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/ComponentManager/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/SystemManager/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/ComponentRegistry/Public -I/home/ok/Code/StitchEngine/StitchEngine/ECS/Utils/Public -I/home/ok/Code/StitchEngine/StitchEngine/vendor -std=c++20 -o CMakeFiles/Game.dir/src/main.cpp.o -c /home/ok/Code/StitchEngine/Game/src/main.cpp",
   "file": "/home/ok/Code/StitchEngine/Game/src/main.cpp",
   "output": "Game/CMakeFiles/Game.dir/src/main.cpp.o"
 }

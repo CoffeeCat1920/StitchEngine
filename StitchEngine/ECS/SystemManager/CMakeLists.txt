@@ -1,16 +1,19 @@
-add_library(SystemManager INTERFACE)
+add_library(SystemManager STATIC)
+
 target_sources(SystemManager
-  INTERFACE
+  PRIVATE
+    Private/SystemManager.cpp
+  PUBLIC
     FILE_SET HEADERS
     BASE_DIRS Public
     FILES
       Public/SystemManager.hpp
 )
 target_include_directories(SystemManager
-  INTERFACE
+  PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/Public
 )
 target_link_libraries(SystemManager
-  INTERFACE Types
-  INTERFACE Utils
+  PUBLIC Types
+  PUBLIC Utils
 )

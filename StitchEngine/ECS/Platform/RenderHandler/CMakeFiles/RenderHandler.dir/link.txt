@@ -1,0 +1,2 @@
+/usr/sbin/ar qc ../../Lib/libRenderHandler.a CMakeFiles/RenderHandler.dir/Private/RenderHandlerImpl.cpp.o
+/usr/sbin/ranlib ../../Lib/libRenderHandler.a

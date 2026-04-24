@@ -1,6 +1,5 @@
 #pragma once
 
-#include "ECSTypes.hpp"
 #include <any>
 #include <cassert>
 #include <functional>
@@ -10,7 +9,8 @@
 #include <string_view>
 #include <unordered_map>
 
-#include "json_util.hpp"
+#include "ECSTypes.hpp"
+#include "nlohmann/json_utils.hpp"
 
 class ComponentRegistry {
 private:

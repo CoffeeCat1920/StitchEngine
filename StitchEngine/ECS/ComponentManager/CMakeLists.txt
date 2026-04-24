@@ -1,5 +1,7 @@
-add_library(ComponentManager INTERFACE)
+add_library(ComponentManager STATIC)
 target_sources(ComponentManager
+  PRIVATE
+    Private/ComponentManager.cpp
   INTERFACE
     FILE_SET HEADERS
     BASE_DIRS Public
@@ -7,11 +9,11 @@ target_sources(ComponentManager
       Public/ComponentManager.hpp
 )
 target_include_directories(ComponentManager
-  INTERFACE
+  PUBLIC 
     ${CMAKE_CURRENT_SOURCE_DIR}/Public
 )
 target_link_libraries(ComponentManager
-  INTERFACE Types
-  INTERFACE ComponentArray
-  INTERFACE EntityManager
+  PUBLIC Types
+  PUBLIC ComponentArray
+  PUBLIC EntityManager
 )

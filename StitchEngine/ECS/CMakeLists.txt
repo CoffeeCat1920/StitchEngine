@@ -2,12 +2,14 @@ add_subdirectory(EntityManager)
 add_subdirectory(ComponentArray)
 add_subdirectory(ComponentManager)
 add_subdirectory(Utils)
-add_subdirectory(SystemManager)
 add_subdirectory(ComponentRegistry)
+add_subdirectory(SystemManager)
 
-add_library(ECS INTERFACE)
+add_library(ECS
+    Private/ECS.cpp
+)
 
-target_include_directories(ECS INTERFACE
+target_include_directories(ECS PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/Public
     ${CMAKE_CURRENT_SOURCE_DIR}/EntityManager/Public
     ${CMAKE_CURRENT_SOURCE_DIR}/ComponentArray/Public
@@ -25,11 +27,10 @@ target_sources(ECS INTERFACE
 )
 
 target_link_libraries(ECS
-  INTERFACE EntityManager
-  INTERFACE ComponentArray
-  INTERFACE ComponentManager
-  INTERFACE SystemManager
-  INTERFACE ComponentRegistry
-  INTERFACE Utils
-  INTERFACE vendor
+  PUBLIC EntityManager
+  PUBLIC ComponentArray
+  PUBLIC ComponentManager
+  PUBLIC ComponentRegistry
+  PUBLIC SystemManager
+  PUBLIC Utils
 )

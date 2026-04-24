@@ -1,7 +1,6 @@
 #pragma once
 
 #include "ECSTypes.hpp"
-#include <memory>
 
 class EntityManager {
 public:
@@ -12,4 +11,4 @@ public:
   virtual void EntityDestroyed(Entity entity) = 0;
 };
 
-std::unique_ptr<EntityManager> CreateEntityManager();
+EntityManager &GetEntityManager();

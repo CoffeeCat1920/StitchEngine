@@ -114,3 +114,5 @@ public:
     entitySignatures[entity] = signature;
   }
 };
+
+ComponentManager &GetComponentManager();

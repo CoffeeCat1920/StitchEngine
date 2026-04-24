@@ -90,3 +90,5 @@ public:
     }
   }
 };
+
+SystemManager &GetSystemManager();
