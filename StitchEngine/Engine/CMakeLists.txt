@@ -17,4 +17,5 @@ target_include_directories(Engine
 
 target_link_libraries(Engine
   PUBLIC Platform 
+  PUBLIC ECS
 )

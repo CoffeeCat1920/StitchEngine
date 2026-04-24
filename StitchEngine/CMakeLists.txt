@@ -10,6 +10,7 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/Lib")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/Build")
 
 add_subdirectory(Platform)
+add_subdirectory(ECS)
 add_subdirectory(Engine)
 add_subdirectory(Types)
 add_subdirectory(ResourceManager)
@@ -23,4 +24,5 @@ target_link_libraries(Core
   INTERFACE Types
   INTERFACE ResourceManager
   INTERFACE Assertions
+  INTERFACE ECS
 )

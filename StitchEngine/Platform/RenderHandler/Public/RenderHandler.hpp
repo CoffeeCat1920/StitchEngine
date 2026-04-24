@@ -1,7 +1,6 @@
 #pragma once
 
 #include "RenderTypes.hpp"
-#include <memory>
 
 struct RenderCommand {
   SpriteId textureId;

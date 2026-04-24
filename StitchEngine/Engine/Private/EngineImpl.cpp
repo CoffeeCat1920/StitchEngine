@@ -1,3 +1,4 @@
+#include "ECS.hpp"
 #include "Engine.hpp"
 #include "RenderHandler.hpp"
 #include "TextureHandler.hpp"
@@ -10,12 +11,13 @@ private:
   WindowHandler &g_windowHandler;
   RenderHandler &g_renderHandler;
   TextureHandler &g_textureHandler;
+  ECS &g_ECS;
 
 public:
   EnineImpl(WindowConfig windowCfg)
       : g_windowHandler(GetWindowHandler(windowCfg)),
         g_renderHandler(GetRenderHandler()),
-        g_textureHandler(GetTextureHandler()) {}
+        g_textureHandler(GetTextureHandler()), g_ECS(ECS::Instance()) {}
 
   void Init() override { g_windowHandler.Init(); }
 
