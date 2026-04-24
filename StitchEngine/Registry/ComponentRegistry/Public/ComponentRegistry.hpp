@@ -9,6 +9,7 @@
 #include <string_view>
 #include <unordered_map>
 
+#include "ECS.hpp"
 #include "ECSTypes.hpp"
 #include "nlohmann/json_utils.hpp"
 
@@ -112,3 +113,6 @@ public:
   };                                                                           \
   static Type##_Registrar Type##_registrar_;                                   \
   }
+
+#define COMPONENT(Type, ...)                                                   \
+  NLOHMANN_DEFINE_TYPE_INTRUSIVE_WITH_DEFAULT(Type, __VA_ARGS__)

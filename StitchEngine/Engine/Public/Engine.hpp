@@ -1,6 +1,5 @@
 #pragma once
 
-#include "ECS.hpp"
 #include "WindowTypes.hpp"
 
 #include <memory>

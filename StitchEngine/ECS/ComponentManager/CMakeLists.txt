@@ -17,3 +17,5 @@ target_link_libraries(ComponentManager
   PUBLIC ComponentArray
   PUBLIC EntityManager
 )
+
+target_compile_options(ComponentManager PRIVATE -mcmodel=medium)

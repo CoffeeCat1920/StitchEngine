@@ -21,3 +21,5 @@ target_link_libraries(EntityManager
   PUBLIC raylib 
   PUBLIC Types
 )
+
+target_compile_options(EntityManager PRIVATE -mcmodel=medium)

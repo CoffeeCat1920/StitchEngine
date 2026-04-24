@@ -15,12 +15,15 @@ add_subdirectory(Engine)
 add_subdirectory(Types)
 add_subdirectory(ResourceManager)
 add_subdirectory(Assertions)
+add_subdirectory(Utils)
+add_subdirectory(Registry)
 
 add_library(Core INTERFACE)
 target_link_libraries(Core
   INTERFACE Platform
   INTERFACE Engine 
   INTERFACE Types
+  INTERFACE Utils 
   INTERFACE ResourceManager
   INTERFACE Assertions
   INTERFACE ECS

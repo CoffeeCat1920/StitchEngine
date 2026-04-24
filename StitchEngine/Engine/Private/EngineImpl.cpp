@@ -1,3 +1,4 @@
+#include "ComponentRegistry.hpp"
 #include "ECS.hpp"
 #include "Engine.hpp"
 #include "RenderHandler.hpp"
@@ -6,18 +7,26 @@
 
 #include <memory>
 
+struct CGravity {
+  float force = 0;
+  COMPONENT(CGravity, force)
+};
+REFLECTION(CGravity);
+
 class EnineImpl : public Engine {
 private:
   WindowHandler &g_windowHandler;
   RenderHandler &g_renderHandler;
   TextureHandler &g_textureHandler;
+  ComponentRegistry &g_componentRegistry;
   ECS &g_ECS;
 
 public:
   EnineImpl(WindowConfig windowCfg)
       : g_windowHandler(GetWindowHandler(windowCfg)),
         g_renderHandler(GetRenderHandler()),
-        g_textureHandler(GetTextureHandler()), g_ECS(ECS::Instance()) {}
+        g_textureHandler(GetTextureHandler()), g_ECS(ECS::Instance()),
+        g_componentRegistry(ComponentRegistry::Instance()) {}
 
   void Init() override { g_windowHandler.Init(); }
 

@@ -18,6 +18,5 @@ target_include_directories(ComponentRegistry
 
 target_link_libraries(ComponentRegistry
   PUBLIC Types
-  PUBLIC ComponentArray
-  PUBLIC EntityManager
+  PUBLIC ECS
 )
