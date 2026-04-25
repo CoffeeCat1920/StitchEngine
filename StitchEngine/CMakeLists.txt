@@ -17,6 +17,7 @@ add_subdirectory(ResourceManager)
 add_subdirectory(Assertions)
 add_subdirectory(Utils)
 add_subdirectory(Registry)
+add_subdirectory(Gameplay)
 
 add_library(Core INTERFACE)
 target_link_libraries(Core
@@ -27,4 +28,5 @@ target_link_libraries(Core
   INTERFACE ResourceManager
   INTERFACE Assertions
   INTERFACE ECS
+  INTERFACE Gameplay
 )

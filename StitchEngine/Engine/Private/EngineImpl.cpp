@@ -6,8 +6,6 @@
 #include "TextureHandler.hpp"
 #include "WindowHandler.hpp"
 
-#include <memory>
-
 class EnineImpl : public Engine {
 private:
   WindowHandler &g_windowHandler;

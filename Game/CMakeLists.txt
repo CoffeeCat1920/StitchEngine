@@ -9,6 +9,7 @@ add_executable(Game)
 
 target_link_libraries(Game
   PRIVATE Engine
+  PRIVATE Gameplay
 )
 
 target_sources(Game
