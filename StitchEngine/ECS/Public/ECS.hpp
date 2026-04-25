@@ -27,7 +27,7 @@ public:
     return instance;
   }
 
-  Entity AddEntity(std::string name) { return entityManager.CreateEntity(); }
+  Entity AddEntity() { return entityManager.CreateEntity(); }
 
   void RemoveEntity(Entity entity) {
     entityManager.EntityDestroyed(entity);

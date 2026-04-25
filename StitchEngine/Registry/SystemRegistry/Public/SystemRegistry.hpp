@@ -40,6 +40,7 @@ public:
 
   template <typename T, typename... Components>
   void RegisterPhysicsSystem(const std::string &name) {
+    std::cout << "Registering: " << name << "\n";
     RegisterSystemImpl<T, Components...>(name, SystemType::Physics);
   }
 
@@ -51,6 +52,7 @@ public:
   void PhysicsUpdate() {
     for (auto &[_, sys] : physicsSystemsRegister) {
       sys->Update();
+      std::cout << "Hello\n";
     }
   }
 
