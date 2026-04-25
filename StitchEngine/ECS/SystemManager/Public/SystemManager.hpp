@@ -81,7 +81,8 @@ public:
     for (const auto &pair : systems) {
       const auto &system = pair.second;
       const auto &systemSignature = system->signature;
-
+      std::cout << "\nSystem Signature: " << systemSignature
+                << "Component Signature" << signature << std::endl;
       if ((signature & systemSignature) == systemSignature) {
         system->entities.insert(entity);
       } else {
