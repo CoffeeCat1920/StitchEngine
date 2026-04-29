@@ -2,6 +2,7 @@
 
 #include "ComponentRegistry.hpp"
 #include "MathsTypes.hpp"
+#include "RenderTypes.hpp"
 
 inline void to_json(nlohmann::json &j, const Vec2 &v) {
   j = {{"x", v.x}, {"y", v.y}};
@@ -19,3 +20,9 @@ struct CTransform {
   COMPONENT(CTransform, position, scale)
 };
 REFLECTION(CTransform);
+
+struct CSprite {
+  SpriteId sprite;
+  COMPONENT(CSprite, sprite)
+};
+REFLECTION(CSprite)

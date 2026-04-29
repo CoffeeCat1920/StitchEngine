@@ -2,21 +2,39 @@
 
 #include "ECS.hpp"
 #include "Gameplay_Components.hpp"
+#include "RenderHandler.hpp"
+#include "SystemManager.hpp"
 #include "SystemRegistry.hpp"
 
 #include <raylib.h>
 
-struct STest : System {
+struct SRenderer : System {
   ECS &g_ECS = ECS::Instance();
+  RenderHandler &g_renderHandler = GetRenderHandler();
   void Update() override {
     for (const auto &entity : System::entities) {
       auto &transform = g_ECS.GetComponent<CTransform>(entity);
-      std::cout << transform.position.x << "\n"
-                << transform.position.y << std::endl;
+      auto &sprite = g_ECS.GetComponent<CSprite>(entity);
+      RenderCommand command = {.textureId = sprite.sprite,
+                               .x = transform.position.x,
+                               .y = transform.position.y};
+      g_renderHandler.QueueCommand(command);
     }
   }
 };
-REGISTER_SYSTEM(STest, Physics, CTransform);
+REGISTER_SYSTEM(SRenderer, Physics, CTransform, CSprite);
+
+// struct STest : System {
+//   ECS &g_ECS = ECS::Instance();
+//   void Update() override {
+//     for (const auto &entity : System::entities) {
+//       auto &transform = g_ECS.GetComponent<CTransform>(entity);
+//       std::cout << transform.position.x << "\n"
+//                 << transform.position.y << std::endl;
+//     }
+//   }
+// };
+// REGISTER_SYSTEM(STest, Physics, CTransform);
 
 // struct SPhysics : System {
 //   ECS &gEcs = ECS::Instance();

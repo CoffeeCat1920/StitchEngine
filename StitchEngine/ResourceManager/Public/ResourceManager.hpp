@@ -5,7 +5,8 @@
 
 class ResourceManager {
 public:
-  ResourceManager();
-  virtual void LoadSprite(std::filesystem::path path) = 0;
+  virtual SpriteId LoadSprite(std::filesystem::path path) = 0;
   virtual void UnloadSprite(SpriteId spriteId) = 0;
 };
+
+ResourceManager &GetResourceManager();

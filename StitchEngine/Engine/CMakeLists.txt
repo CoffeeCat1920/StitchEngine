@@ -19,4 +19,6 @@ target_link_libraries(Engine
   PUBLIC Platform 
   PUBLIC ECS
   PUBLIC Registry
+  PUBLIC TextureHandler
+  PUBLIC ResourceManager
 )

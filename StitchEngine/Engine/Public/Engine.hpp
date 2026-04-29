@@ -1,5 +1,6 @@
 #pragma once
 
+#include "ResourceManager.hpp"
 #include "WindowTypes.hpp"
 
 #include <memory>

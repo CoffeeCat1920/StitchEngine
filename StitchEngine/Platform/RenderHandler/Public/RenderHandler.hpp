@@ -4,7 +4,7 @@
 
 struct RenderCommand {
   SpriteId textureId;
-  int x, y;
+  long double x, y;
 };
 
 class RenderHandler {
