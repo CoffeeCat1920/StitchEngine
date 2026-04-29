@@ -1,7 +1,8 @@
 #include "ECS.hpp"
 #include "Engine.hpp"
 #include "Gameplay_Components.hpp"
-#include "Gameplay_Systems.hpp" // Force-links self-registering systems — linker strips them otherwise.
+#include "Gameplay_Systems.hpp" // Force-links self-registering systems —
+// linker strips them otherwise.
 #include "ResourceManager.hpp"
 #include "WindowTypes.hpp"
 

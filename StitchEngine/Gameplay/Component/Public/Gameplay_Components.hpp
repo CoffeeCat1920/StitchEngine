@@ -3,7 +3,6 @@
 #include "ComponentRegistry.hpp"
 #include "MathsTypes.hpp"
 #include "RenderTypes.hpp"
-#include <filesystem>
 
 inline void to_json(nlohmann::json &j, const Vec2 &v) {
   j = {{"x", v.x}, {"y", v.y}};
@@ -21,12 +20,6 @@ struct CTransform {
   COMPONENT(CTransform, position, scale)
 };
 REFLECTION(CTransform);
-
-struct CPathSprite {
-  std::filesystem::path path;
-  COMPONENT(CPathSprite, path)
-};
-REFLECTION(CPathSprite)
 
 struct CSprite {
   SpriteId sprite;
