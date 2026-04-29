@@ -21,4 +21,5 @@ target_link_libraries(Engine
   PUBLIC Registry
   PUBLIC TextureHandler
   PUBLIC ResourceManager
+  PUBLIC Scene
 )

@@ -8,7 +8,7 @@
 
 #include <raylib.h>
 
-struct SRenderer : System {
+struct SSpriteRenderer : System {
   ECS &g_ECS = ECS::Instance();
   RenderHandler &g_renderHandler = GetRenderHandler();
   void Update() override {
@@ -22,7 +22,7 @@ struct SRenderer : System {
     }
   }
 };
-REGISTER_SYSTEM(SRenderer, Physics, CTransform, CSprite);
+REGISTER_SYSTEM(SSpriteRenderer, Physics, CTransform, CSprite);
 
 // struct STest : System {
 //   ECS &g_ECS = ECS::Instance();

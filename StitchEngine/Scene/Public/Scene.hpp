@@ -3,6 +3,7 @@
 #include "ComponentRegistry.hpp"
 #include "ECS.hpp"
 #include "ECSTypes.hpp"
+#include "ResourceManager.hpp"
 #include "nlohmann/json_utils.hpp"
 
 #include <filesystem>
@@ -15,6 +16,7 @@ private:
   json sceneData{};
   EntityVec entities{};
   ECS &gECS = ECS::Instance();
+  ResourceManager &g_resourceManager = GetResourceManager();
   ComponentRegistry &componentRegistry = ComponentRegistry::Instance();
 
   void CreateEntities() {
@@ -24,18 +26,28 @@ private:
     for (const auto &entityJson : sceneData["entities"]) {
       std::string name = entityJson.value("name", "Unnamed");
       Entity entity = gECS.AddEntity();
+      entities.push_back(entity);
 
       if (!entityJson.contains("components") ||
           entityJson["components"].empty())
         continue;
       for (const auto &[componentName, componentData] :
            entityJson["components"].items()) {
-        componentRegistry.AddComponent(entity, componentName, componentData);
+        if (componentName == "CSprite") {
+          std::string path = componentData["sprite"];
+          SpriteId spriteId = g_resourceManager.LoadSprite(path);
+        } else {
+          componentRegistry.AddComponent(entity, componentName, componentData);
+        }
       }
     }
   }
 
-  void DeleteEntities() {}
+  void DeleteEntities() {
+    for (auto &entity : entities) {
+      gECS.RemoveEntity(entity);
+    }
+  }
 
 public:
   Scene(const std::filesystem::path &scenePath) {
@@ -50,4 +62,6 @@ public:
 
     CreateEntities();
   }
+  void Load() { CreateEntities(); }
+  void Unload() { DeleteEntities(); }
 };

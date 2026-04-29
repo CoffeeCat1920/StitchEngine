@@ -3,7 +3,6 @@
 #include <any>
 #include <cassert>
 #include <functional>
-#include <raylib.h>
 #include <stdexcept>
 #include <string>
 #include <string_view>

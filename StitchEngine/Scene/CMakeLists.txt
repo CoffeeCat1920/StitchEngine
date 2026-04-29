@@ -20,4 +20,6 @@ target_link_libraries(Scene
   PUBLIC Types
   PUBLIC ECS
   PUBLIC Registry
+  PUBLIC ResourceManager
+  PUBLIC GameplayComponents
 )

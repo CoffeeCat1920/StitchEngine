@@ -2,6 +2,7 @@
 #include "ECS.hpp"
 #include "Engine.hpp"
 #include "RenderHandler.hpp"
+#include "Scene.hpp"
 #include "SystemRegistry.hpp"
 #include "TextureHandler.hpp"
 #include "WindowHandler.hpp"
@@ -24,6 +25,9 @@ public:
         g_textureHandler(GetTextureHandler()), g_ECS(ECS::Instance()),
         g_componentRegistry(ComponentRegistry::Instance()),
         g_systemRegistry(SystemRegistry::Instance()) {}
+
+  void LoadScene(Scene scene) override { scene.Load(); }
+  void UnloadScene(Scene scene) override { scene.Unload(); }
 
   void Init() override { g_windowHandler.Init(); }
 
