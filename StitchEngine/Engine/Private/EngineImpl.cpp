@@ -32,6 +32,7 @@ public:
   void Init() override { g_windowHandler.Init(); }
 
   void Run() override {
+    g_componentRegistry.DumpSchemaToFile("components.json");
     while (g_windowHandler.IsRunning()) {
       g_windowHandler.BeginFrame();
       g_systemRegistry.RenderUpdate();
