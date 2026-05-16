@@ -26,3 +26,9 @@ struct CSprite {
   COMPONENT(CSprite, sprite)
 };
 REFLECTION(CSprite)
+
+struct CMovement {
+  int d;
+  COMPONENT(CMovement, d)
+};
+REFLECTION(CMovement);

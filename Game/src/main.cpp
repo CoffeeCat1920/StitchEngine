@@ -1,8 +1,8 @@
+#include "../Components/components.hpp"
 #include "ECS.hpp"
 #include "Engine.hpp"
 #include "Gameplay_Components.hpp"
-#include "Gameplay_Systems.hpp" // Force-links self-registering systems —
-// linker strips them otherwise.
+#include "Gameplay_Systems.hpp"
 #include "ResourceManager.hpp"
 #include "WindowTypes.hpp"
 
@@ -16,7 +16,7 @@ int main() {
 
   auto &g_resourceManager = GetResourceManager();
   auto test_sprite = g_resourceManager.LoadSprite(
-      "/home/ok/Code/StitchEngine/Game/assets/lamar.png");
+      "/home/ok/Code/StitchEngine/Game/assets/icon.png");
 
   g_ECS.AddComponents(entity,
                       CTransform{
@@ -24,7 +24,7 @@ int main() {
                           .scale = {.x = 1.0f, .y = 1.0f},
                           .rotation = 0.0f,
                       },
-                      CSprite{.sprite = test_sprite});
+                      CSprite{.sprite = test_sprite}, CMovement{});
 
   engine->Run();
 }

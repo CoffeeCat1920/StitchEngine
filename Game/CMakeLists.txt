@@ -15,4 +15,6 @@ target_link_libraries(Game
 target_sources(Game
   PRIVATE 
     ./src/main.cpp
+    ./Components/components.hpp
+    ./Systems/systems.hpp
 )
