@@ -1,5 +1,4 @@
 #include "WindowHandler.hpp"
-#include <raylib.h>
 
 class WindowHandlerImpl : public WindowHandler {
 private:
